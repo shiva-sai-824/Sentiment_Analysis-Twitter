@@ -2,5 +2,10 @@
 
 Dataset:https://www.kaggle.com/datasets/saurabhshahane/twitter-sentiment-dataset
 
-When a user gives a statement it return you output as positive statement or negative statement or neutral.
+Proficient in analyzing sentences and statements to determine their sentiment, categorizing them accurately as either Positive, 
+Negative, or Neutral with precision and efficiency.
 
+Used Masked Language Model(MLM), NSP, NLP, Transformers, Embeddings, BERT
+
+Skilled in extracting sentiment from human language text, employing advanced natural language processing techniques to 
+accurately analyze and interpret the underlying emotions conveyed.
