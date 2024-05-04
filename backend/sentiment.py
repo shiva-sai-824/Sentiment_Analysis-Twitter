@@ -45,7 +45,7 @@ def predict(text):
 
 # Define model and load pre-trained weights
 model = BERTClassifier('bert-base-uncased', num_classes=3)  # Adjust num_classes according to your task
-model.load_state_dict(torch.load('C:\\Users\\deeks\\OneDrive\\Desktop\\practice2\\files\\bert_classifier_three_labeled11.pth', map_location=torch.device('cpu')))
+model.load_state_dict(torch.load('https://drive.google.com/file/d/1wwzShq44gqcRsa9d3DfCRc9TkTsJe1SQ/view?usp=sharing', map_location=torch.device('cpu')))
 
 
 # Tokenizer initialization
