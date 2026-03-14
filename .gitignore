@@ -4,3 +4,4 @@ __pycache__/
 .vscode/
 venv/
 .env
+*.pth filter=lfs diff=lfs merge=lfs -text*.pth filter=lfs diff=lfs merge=lfs -text

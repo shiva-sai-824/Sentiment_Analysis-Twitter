@@ -1,18 +1,20 @@
-# Use Python 3.10
 FROM python:3.10
 
-# Set the working directory
+# Install Git and Git LFS
+RUN apt-get update && apt-get install -y git git-lfs && git lfs install
+
 WORKDIR /app
 
-# Copy requirements and install
+# Copy requirements first for caching
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the backend files
+# Copy everything else
 COPY . .
 
-# Hugging Face Spaces use port 7860
+# IMPORTANT: Force pull the real LFS files into the container
+RUN git lfs pull
+
 EXPOSE 7860
 
-# Start the server
 CMD ["python", "server.py"]
