@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentiment Analysis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Sentiment Analysis</h1>
+
+    <div class="input-row">
+      <input type="text" id="textInput" placeholder="Enter text for sentiment analysis">
+      <button onclick="analyzeSentiment()">Submit</button>
+    </div>
+
+    <div class="robots">
+
+      <!-- Positive -->
+      <div class="robot-slot">
+        <div class="robot-label-top" id="label-positive">positive</div>
+        <div class="robot-wrap">
+          <svg id="robot-positive" width="72" height="80" viewBox="0 0 72 80" fill="none">
+            <rect x="10" y="8" width="52" height="42" rx="8" stroke="#9aa5c4" stroke-width="2.5"/>
+            <circle cx="24" cy="26" r="6" stroke="#9aa5c4" stroke-width="2"/>
+            <circle cx="48" cy="26" r="6" stroke="#9aa5c4" stroke-width="2"/>
+            <circle cx="24" cy="26" r="2.5" fill="#9aa5c4"/>
+            <circle cx="48" cy="26" r="2.5" fill="#9aa5c4"/>
+            <path d="M22 38 Q36 46 50 38" stroke="#9aa5c4" stroke-width="2.5" stroke-linecap="round"/>
+            <rect x="30" y="50" width="12" height="6" rx="2" fill="#9aa5c4" opacity="0.5"/>
+            <polygon points="36,72 30,58 42,58" fill="#9aa5c4" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="robot-bar" id="bar-positive">Calm</div>
+      </div>
+
+      <!-- Neutral -->
+      <div class="robot-slot">
+        <div class="robot-label-top" id="label-neutral">neutral</div>
+        <div class="robot-wrap">
+          <svg id="robot-neutral" width="72" height="80" viewBox="0 0 72 80" fill="none">
+            <rect x="10" y="8" width="52" height="42" rx="8" stroke="#9aa5c4" stroke-width="2.5"/>
+            <circle cx="24" cy="26" r="6" stroke="#9aa5c4" stroke-width="2"/>
+            <circle cx="48" cy="26" r="6" stroke="#9aa5c4" stroke-width="2"/>
+            <circle cx="24" cy="26" r="2.5" fill="#9aa5c4"/>
+            <circle cx="48" cy="26" r="2.5" fill="#9aa5c4"/>
+            <path d="M22 40 H50" stroke="#9aa5c4" stroke-width="2.5" stroke-linecap="round"/>
+            <rect x="30" y="42" width="12" height="5" rx="2" fill="#9aa5c4" opacity="0.35"/>
+            <rect x="30" y="50" width="12" height="6" rx="2" fill="#9aa5c4" opacity="0.5"/>
+            <polygon points="36,72 30,58 42,58" fill="#9aa5c4" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="robot-bar" id="bar-neutral">Questioning</div>
+      </div>
+
+      <!-- Negative -->
+      <div class="robot-slot">
+        <div class="robot-label-top" id="label-negative">negative</div>
+        <div class="robot-wrap">
+          <svg id="robot-negative" width="72" height="80" viewBox="0 0 72 80" fill="none">
+            <rect x="10" y="8" width="52" height="42" rx="8" stroke="#9aa5c4" stroke-width="2.5"/>
+            <circle cx="24" cy="26" r="6" stroke="#9aa5c4" stroke-width="2"/>
+            <circle cx="48" cy="26" r="6" stroke="#9aa5c4" stroke-width="2"/>
+            <circle cx="24" cy="26" r="2.5" fill="#9aa5c4"/>
+            <circle cx="48" cy="26" r="2.5" fill="#9aa5c4"/>
+            <path d="M22 44 Q36 36 50 44" stroke="#9aa5c4" stroke-width="2.5" stroke-linecap="round"/>
+            <rect x="30" y="50" width="12" height="6" rx="2" fill="#9aa5c4" opacity="0.5"/>
+            <polygon points="36,72 30,58 42,58" fill="#9aa5c4" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="robot-bar" id="bar-negative">Angry</div>
+      </div>
+
+    </div>
+
+    <div class="result-text" id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
