@@ -136,7 +136,8 @@ def predict_sentiment(text, model, tokenizer, device='cpu', max_length=128):
 def load_model_and_tokenizer(model_path):
     device = torch.device('cpu')
     model = BERTClassifier('bert-base-uncased', num_classes=3)
-    model.load_state_dict(torch.load(model_path, map_location=device))
+    model_state = torch.load(model_path, map_location=device, weights_only=False)
+    model.load_state_dict(model_state)
     model.to(device)
     tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
     return model, tokenizer
